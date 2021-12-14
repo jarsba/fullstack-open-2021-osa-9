@@ -1,0 +1,12 @@
+GET http://localhost:3001/api/diagnoses HTTP/1.1
+
+###
+
+POST http://localhost:3001/api/diagnoses HTTP/1.1
+content-type: application/json
+
+{
+    "code": "H40.2",
+    "name": "Pulminary embolism",
+    "latin": "Pulminarios embolismus"
+}

@@ -1,0 +1,14 @@
+GET http://localhost:3001/api/patients HTTP/1.1
+
+###
+
+POST http://localhost:3001/api/patients HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Hans Rosling",
+    "dateOfBirth": "1954-01-25",
+    "ssn": "250154-425G",
+    "gender": "male",
+    "occupation": "Statistician"
+}

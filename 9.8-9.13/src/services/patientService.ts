@@ -1,5 +1,5 @@
 import patients from '../../data/patients';
-import {v1 as uuid} from 'uuid'
+import {v1 as uuid} from 'uuid';
 
 import { PatientEntry, NonSensitivePatientEntry, NewPatientEntry } from '../types';
 

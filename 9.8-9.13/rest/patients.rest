@@ -12,3 +12,56 @@ content-type: application/json
     "gender": "male",
     "occupation": "Statistician"
 }
+
+###
+
+GET http://localhost:3001/api/patients/d2773336-f723-11e9-8f0b-362b9e155667 HTTP/1.1
+
+###
+
+POST http://localhost:3001/api/patients/d2773336-f723-11e9-8f0b-362b9e155667/entries HTTP/1.1
+content-type: application/json
+
+{
+    "date": "2021-11-30",
+    "type": "Hospital",
+    "specialist": "Layne Norton",
+    "diagnosisCodes": ["M51.2"],
+    "description": "Overtraining in sports, need to have a rest week.",
+    "discharge": {
+        "date": "2021-12-08",
+        "criteria": "Recovered from training."
+    }
+}
+
+###
+
+POST http://localhost:3001/api/patients/d2773336-f723-11e9-8f0b-362b9e155667/entries HTTP/1.1
+content-type: application/json
+
+{
+    "date": "2021-12-07",
+    "type": "OccupationalHealthcare",
+    "specialist": "Hippokrates",
+    "diagnosisCodes": ["H54.7"],
+    "description": "Snowblindness in December.",
+    "employerName": "Stara",
+    "sickLeave": {
+        "startDate": "2021-12-08",
+        "endDate": "2021-12-21"
+    }
+}
+
+###
+
+POST http://localhost:3001/api/patients/d2773336-f723-11e9-8f0b-362b9e155667/entries HTTP/1.1
+content-type: application/json
+
+{
+    "date": "2021-12-14",
+    "type": "HealthCheck",
+    "specialist": "Dr Mike",
+    "diagnosisCodes": [],
+    "description": "Quarterly control visit. All good.",
+    "healthCheckRating": 3
+}
